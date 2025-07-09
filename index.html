@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style type="text/css" media="all">
+  body {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100dv;
+  }
+ .container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 240px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background: #222;
+}
+
+.display {
+  width: 98%;
+  height: 60px;
+  font-size: 1.5rem;
+  text-align: right;
+  padding: 5px;
+  color: #fff;
+  outline: none;
+  border: none;
+  float:left;
+}
+
+.container button {
+  width: 25%;
+  height: 60px;
+  font-size: 1.3rem;
+  border: none;
+  cursor: pointer;
+  outline:1px solid;
+}
+
+.container .operator {
+  background-color: orange;
+}
+
+.container .number {
+  background-color: rgb(200, 200, 200, 0.9);
+}
+
+.container .clear {
+  background-color: rgb(100, 100, 100);
+}
+    
+  </style>
+</head>
+<body>
+  
+  
+  <div class="container">
+    <div class="cdisplay">
+    <input class="display" type="text" disabled="">
+    </div>
+    <button class="number" onclick="input(1)">1</button>
+    <button class="number" onclick="input(2)">2</button>
+    <button class="number" onclick="input(3)">3</button>
+    <button class="operator" onclick="operator('+')">+</button>
+    
+    <button class="number" onclick="input(4)">4</button>
+    <button class="number" onclick="input(5)">5</button>
+    <button class="number" onclick="input(6)">6</button>
+    <button class="operator" onclick="operator('/')">÷</button>
+    
+    <button class="number" onclick="input(7)">7</button>
+    <button class="number" onclick="input(8)">8</button>
+    <button class="number" onclick="input(9)">9</button>
+    <button class="operator" onclick="operator('*')">*</button>
+    
+    <button class="number" onclick="input(0)">0</button>
+    <button class="clear" onclick="clearDisplay()">c</button>
+    <button class="operator" onclick="calculate()"> =</button>
+    <button class="operator" onclick="operator('-')">-</button>
+  </div>
+<script src="./src/script.js></script>
+</body>
+</html>
