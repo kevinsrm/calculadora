@@ -4,41 +4,41 @@ var numeroAnterior = "";
   
   function input(num){
     numeroAtual += num;
-    updateDisplay()
+    updateDisplay();
   }
   
   function operator(op){
-    if(!numeroAtual) return
-    operador = op
-    numeroAnterior = numeroAtual
-    numeroAtual = ""
-    calculate()
+    if(!numeroAtual) return;
+    operador = op;
+    numeroAnterior = numeroAtual;
+    numeroAtual = "";
+    calculate();
   }
   
   function calculate(){
     if(!numeroAtual || !numeroAnterior) return;
     atual = parseFloat(numeroAtual);
     anterior = parseFloat(numeroAnterior);
-    result = ""
+    result = "";
     switch(operador){
       case "/":
-        result = anterior / atual
+        result = anterior / atual;
         break;
       case "+":
-        result = anterior + atual
+        result = anterior + atual;
         break;
       case "*":
-        result = anterior * atual
+        result = anterior * atual;
         break;
       case "-":
-        result = anterior - atual
+        result = anterior - atual;
         break;
       default:
     }
-    numeroAtual = result.toString()
+    numeroAtual = result.toString();
     numeroAnterior = '';
-    operador = ''
-    updateDisplay()
+    operador = '';
+    updateDisplay();
     
   }
   
@@ -46,9 +46,9 @@ var numeroAnterior = "";
     operador = "";
     numeroAnterior = "";
     numeroAtual = "";
-    updateDisplay()
+    updateDisplay();
   }
   
   function updateDisplay(){
-    document.querySelector(".display").value = numeroAtual
+    document.querySelector(".display").value = numeroAtual;
   }
