@@ -49,6 +49,10 @@ var numeroAnterior = "";
     updateDisplay();
   }
   
+  var SIMBOLOS = { "+": "+", "-": "−", "*": "×", "/": "÷" };
+
   function updateDisplay(){
     document.querySelector(".display").value = numeroAtual;
+    document.querySelector("#expression").textContent =
+      (numeroAnterior && operador) ? numeroAnterior + " " + SIMBOLOS[operador] : "";
   }
